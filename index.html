@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <title>Anonymus Social</title>
+    <title>Anonymus Social Raihan</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
@@ -15,32 +15,57 @@
         }
     </style>
 </head>
-<body class="min-h-screen bg-gray-900 text-gray-100 flex flex-col">
-    <header class="flex justify-between items-center py-6 px-4 bg-gray-900">
+<body class="min-h-screen bg-gradient-to-r from-indigo-600 to-purple-600 text-gray-100 flex flex-col">
+
+    <!-- Header -->
+    <header class="flex justify-between items-center py-6 px-4 bg-gray-900 bg-opacity-75 shadow-lg">
         <div class="logo flex-shrink-0">
             <img src="images/anonymus.png" alt="Logo" class="ml-4 md:ml-20 w-10 h-10 md:h-10 md:w-10 lg:h-12 lg:w-12">
         </div>
-        <h1 class="flex-grow text-center text-2xl md:text-3xl lg:text-4xl font-bold">Anonymus Social</h1>
-        <button id="btnLogout" onclick="handleLogout()" class="mr-4 md:mr-20 flex-shrink-0 px-4 py-2 bg-blue-600 text-white font-bold rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-150 ease-in-out">Logout</button>
+        <h1 class="flex-grow text-center text-2xl md:text-3xl lg:text-4xl font-bold text-white">Anonymus Social</h1>
+        <button id="btnLogout" onclick="handleLogout()" class="mr-4 md:mr-20 flex-shrink-0 px-4 py-2 bg-blue-600 text-white font-bold rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-150 ease-in-out">Keluar</button>
     </header>
 
+    <!-- Main Content -->
     <main class="flex-grow overflow-auto px-4 pb-24 max-h-screen">
         <div id="posts" class="max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto space-y-4">
             <!-- Posts will be dynamically inserted here -->
         </div>
     </main>    
 
-    <footer class="fixed bottom-0 left-0 right-0 bg-gray-800 p-4">
-        <form id="postForm" class="flex max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto space-x-2">
-            <input id="newPost" placeholder="What's on your mind?" 
-                   class="flex-grow p-2 bg-gray-700 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                   type="text">
-            <button type="submit" 
-                    class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-150 ease-in-out">
-                Post
-            </button>
-        </form>
+    <!-- Footer with Contact and Social Media -->
+    <footer class="bg-gray-800 p-6">
+        <div class="flex flex-col md:flex-row justify-between items-center max-w-6xl mx-auto space-y-4 md:space-y-0">
+            <!-- Post Form -->
+            <form id="postForm" class="flex max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto space-x-2">
+                <input id="newPost" placeholder="Apa yang ada di pikiranmu?" 
+                       class="flex-grow p-2 bg-gray-700 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                       type="text">
+                <button type="submit" 
+                        class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-150 ease-in-out">
+                    Kirim
+                </button>
+            </form>
+
+            <!-- Social Media and Contact Developer -->
+            <div class="flex space-x-4 items-center">
+                <a href="https://www.instagram.com/muhammad_raihan0307" target="_blank" class="text-white hover:text-blue-500 transition duration-150 ease-in-out">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </a>
+                <a href="https://www.tiktok.com/raihan_official0307" target="_blank" class="text-white hover:text-blue-500 transition duration-150 ease-in-out">
+                    <i class="fab fa-tiktok text-2xl"></i>
+                </a>
+                <a href="mailto:raihan.website00@gmail.com" class="text-white hover:text-blue-500 transition duration-150 ease-in-out">
+                    <i class="fas fa-envelope text-2xl"></i>
+                </a>
+            </div>
+        </div>
+        <div class="text-center mt-6 text-xs text-gray-400">
+            <p>&copy; 2024 Raihan_official0307 Anonymus Social. Semua hak cipta dilindungi.</p>
+        </div>
     </footer>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="main.js" type="module"></script>
 </body>
 </html>
