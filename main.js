@@ -88,9 +88,10 @@ function renderPosts() {
 }
 
 function deletePost(postId) {
-    posts = posts.filter(post => post.id !== postId);
-    renderPosts();
-    savePostsToLocalStorage();
+    console.log('Deleting post with ID:', postId); // Debugging line
+    posts = posts.filter(post => post.id !== postId);  // Filter out the post with the matching ID
+    renderPosts();  // Re-render the updated list
+    savePostsToLocalStorage();  // Save updated posts to localStorage
 }
 
 function handleLogout() {
